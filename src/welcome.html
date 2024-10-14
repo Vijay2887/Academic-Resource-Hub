@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Exam Resource Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0 10px; /* Leave 10px gap towards edges */
+        background-color: #f4f7fa;
+        color: #333;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        box-sizing: border-box; /* Ensure padding is included in width */
+      }
+
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-size: 5vw; /* Responsive size for the main heading */
+        margin: 0;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        color: white; /* Set font color to white */
+        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+        position: relative; /* Required for pseudo-elements */
+      }
+
+      h1::before {
+        content: attr(data-text); /* Use the same text for border */
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: transparent; /* Make the text transparent */
+        background-image: linear-gradient(black, black); /* Black for border */
+        background-size: 100% 100%;
+        z-index: -1; /* Send the border behind the main text */
+        filter: blur(2px); /* Blur the border for a softer look */
+        font-size: 8vw; /* Match the font size for the border */
+      }
+
+      h2 {
+        font-size: 2.5vw; /* Responsive size for subheadings */
+        color: #007bff;
+      }
+
+      nav {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        font-size: 1.5vw; /* Responsive size for nav links */
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+        color: #ffd700; /* Change color on hover */
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #007bff;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: calc(100% - 20px); /* Width calculation to fit body padding */
+        font-size: 1.5vw; /* Responsive size for footer text */
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav a {
+          margin: 5px 0;
+        }
+      }
+
+      .study-guides li a {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .study-guides li a:hover {
+        text-decoration: underline;
+        color: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 data-text="The Academic Resource Hub: PDFs for Every Discipline">
+        The Academic Resource Hub: PDF's for Every Discipline
+      </h1>
+    </header>
+
+    <nav>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+      <h2 id="resources">Resources</h2>
+      <p>Here you can find various resources for your exams, including:</p>
+      <ul class="study-guides">
+        <h2>Study Guides</h2>
+        <h3>III Year Subjects</h3>
+        <li><a href="/api/show-cd-content">Compiler Design</a></li>
+        <li><a href="/api/show-dm-content">Data Mining</a></li>
+        <li><a href="/api/show-nlp-content">Natural Language Processing</a></li>
+        <li>
+          <a href="/api/show-eea-content"
+            >Engineering Economics and Accountancy</a
+          >
+        </li>
+        <li><a href="/api/show-mf-content">Management Fundamentals</a></li>
+        <li><a href="/api/show-cn-content">Computer Networks</a></li>
+        <li>
+          <a href="/api/show-flat-content"
+            >Formal Languages and Automata Theroy</a
+          >
+        </li>
+        <li>
+          <a href="/api/show-sem-content">Software Engineering and Modeling</a>
+        </li>
+        <li><a href="/api/show-cc-content">Cloud Computing</a></li>
+        <hr />
+      </ul>
+
+      <!-- second year subjects -->
+      <!-- asot, dbms, wt, daa, maths dm, ai, coa, ds, java, os -->
+      <h3>II Year Subjects</h3>
+      <ul class="study-guides">
+        <li><a href="/api/show-oop-content">Java</a></li>
+      </ul>
+
+      <h2 id="about">About Us</h2>
+      <p>
+        We are dedicated to providing students with the best resources to excel
+        in their exams. Our team works tirelessly to curate materials that meet
+        the needs of every learner.
+      </p>
+
+      <h2 id="contact">Contact Us</h2>
+      <p>
+        If you have any questions or suggestions, feel free to
+        <a href="mailto:cseengineeringpdfs@gmail.com">contact us</a>!
+      </p>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Academic Resource Hub | All rights reserved.</p>
+    </footer>
+  </body>
+</html>
